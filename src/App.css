@@ -1,38 +1,85 @@
+body {
+  background: gray;
+}
 .App {
+  text-align: left;
+  font-size: 1.5em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding: 10px 20px;
+  margin: 10px auto;
+  max-width: 800px;
+}
+
+form {
+  background: #f4f7f8;
+  padding: 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+form label {
+  display: block;
+  margin-bottom: 15px;
+}
+form input[type="text"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  margin: 0;
+  margin-top: 10px;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+
+form input[type="submit"] {
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #fff;
+  margin: 0 auto;
+  background: #1abc9c;
+  font-size: 1em;
   text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #16a085;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+form input[type="submit"]:hover {
+  background: #109177;
+}
+form input[type="submit"]:disabled,
+form input[type="submit"][disabled] {
+  background: gray;
+  border: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label.status {
+  color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label.error {
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.result {
+  background: dimgray;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.result pre {
+    color: white;
+  font-size: 0.6em;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter",
+    "Lucida Typewriter", monospace;
 }
