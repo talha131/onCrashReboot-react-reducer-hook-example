@@ -77,6 +77,7 @@ const App = () => {
         dispatch({ type: "error", code: err });
       });
   };
+
   const onValueChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: "typing", value: event.target.value });
   };
@@ -91,6 +92,7 @@ const App = () => {
 
   return (
     <div className="App">
+
       <form noValidate autoComplete="off">
         <label>
           Enter User ID (1-12)
@@ -110,6 +112,7 @@ const App = () => {
           onClick={onFetchClicked}
           disabled={isFetching}
         />
+
         {isFetching && (
           <label className="status">
             Fetching data. Please wait (max wait: 5 seconds)...
@@ -119,6 +122,7 @@ const App = () => {
           <label className="error">{errorMessage}</label>
         )}
       </form>
+
       {isSuccessful && (
         <div className="result">
           <h2>Result</h2>
@@ -128,6 +132,7 @@ const App = () => {
           </pre>
         </div>
       )}
+
     </div>
   );
 };
